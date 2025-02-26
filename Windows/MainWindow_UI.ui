@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="wgt_main">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frm_top">
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="SicaklikLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Sıcaklık:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="BasincLabel_2">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>20 C</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="BasincLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Basinc:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="BasincLabel_3">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>0.9 ATM</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="GorevYukuYukseklikLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Görev Yükü Yükseklik:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="GorevYukuYukseklikLabel_2">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>300 m</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="TasiyiciYukseklikLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Taşıyıcı Yükseklik:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="TasiyiciYukseklikLabel_2">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>250 m</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="IrtifaFarkiLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>İrtifa Farkı:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="IrtifaFarkiLabel_2">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>50 m</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="GorevYukuHizLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Görev Yükü Hızı:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="GorevYukuHizLabel_2">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>10 m/s</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="TasiyiciHiziLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Taşıyıcı Hızı:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="TasiyiciHiziLabel_2">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>12 m/s</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="PilGerilimiLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Pil Gerilimi:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="PilGerilimiLabel_2">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>7 V</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frm_middle">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QFrame" name="frm_middle_left">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frm_middle_middle">
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frm_middle_right">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frm_bottom">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="actionKopyala">
+   <property name="text">
+    <string>Kopyala</string>
+   </property>
+  </action>
+  <action name="actionYap_t_r">
+   <property name="text">
+    <string>Yapıştır</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
