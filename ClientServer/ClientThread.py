@@ -8,7 +8,7 @@ class ClientThread(QThread):
     """Sunucu ile sürekli veri alışverişi yapan arka plan thread'i"""
     received_data = Signal(str)  # Gelen veriyi GUI'ye göndermek için sinyal
 
-    def __init__(self, host="localhost", port=6000):
+    def __init__(self, host="localhost", port=7001):
         super().__init__()
         self.host = host
         self.port = port

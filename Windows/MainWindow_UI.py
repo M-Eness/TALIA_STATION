@@ -168,10 +168,32 @@ class Ui_MainWindow(object):
 "/*rgb(155, 195, 244)")
         self.frm_middle_left.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle_left.setFrameShadow(QFrame.Shadow.Raised)
-        self.pushButton = QPushButton(self.frm_middle_left)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(70, 440, 100, 32))
-        self.pushButton.setStyleSheet(u"QPushButton {\n"
+
+        self.horizontalLayout_3.addWidget(self.frm_middle_left)
+
+        self.frm_middle_middle = QFrame(self.frm_middle)
+        self.frm_middle_middle.setObjectName(u"frm_middle_middle")
+        self.frm_middle_middle.setStyleSheet(u"background-color: rgb(5, 69, 105);\n"
+"")
+        self.frm_middle_middle.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frm_middle_middle.setFrameShadow(QFrame.Shadow.Raised)
+
+        self.horizontalLayout_3.addWidget(self.frm_middle_middle)
+
+        self.frm_middle_right = QFrame(self.frm_middle)
+        self.frm_middle_right.setObjectName(u"frm_middle_right")
+        self.frm_middle_right.setMinimumSize(QSize(250, 0))
+        self.frm_middle_right.setMaximumSize(QSize(250, 500))
+        self.frm_middle_right.setStyleSheet(u"background-color: rgb(118, 152, 194);")
+        self.frm_middle_right.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frm_middle_right.setFrameShadow(QFrame.Shadow.Raised)
+        self.camera_label = QLabel(self.frm_middle_right)
+        self.camera_label.setObjectName(u"camera_label")
+        self.camera_label.setGeometry(QRect(27, 85, 211, 391))
+        self.camera_button = QPushButton(self.frm_middle_right)
+        self.camera_button.setObjectName(u"camera_button")
+        self.camera_button.setGeometry(QRect(80, 40, 100, 32))
+        self.camera_button.setStyleSheet(u"QPushButton {\n"
 "    background: qlineargradient(\n"
 "        spread:pad, x1:0, y1:0, x2:1, y2:1,\n"
 "        stop:0 rgba(156, 164, 172, 255), /* A\u00e7\u0131k gri-mavi */\n"
@@ -197,25 +219,6 @@ class Ui_MainWindow(object):
 "\n"
 "/*background-color:rgb(156, 164, 172);\n"
 " border-radius: 10px;*/")
-
-        self.horizontalLayout_3.addWidget(self.frm_middle_left)
-
-        self.frm_middle_middle = QFrame(self.frm_middle)
-        self.frm_middle_middle.setObjectName(u"frm_middle_middle")
-        self.frm_middle_middle.setStyleSheet(u"background-color: rgb(5, 69, 105);\n"
-"")
-        self.frm_middle_middle.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frm_middle_middle.setFrameShadow(QFrame.Shadow.Raised)
-
-        self.horizontalLayout_3.addWidget(self.frm_middle_middle)
-
-        self.frm_middle_right = QFrame(self.frm_middle)
-        self.frm_middle_right.setObjectName(u"frm_middle_right")
-        self.frm_middle_right.setMinimumSize(QSize(250, 0))
-        self.frm_middle_right.setMaximumSize(QSize(250, 500))
-        self.frm_middle_right.setStyleSheet(u"background-color: rgb(118, 152, 194);")
-        self.frm_middle_right.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frm_middle_right.setFrameShadow(QFrame.Shadow.Raised)
 
         self.horizontalLayout_3.addWidget(self.frm_middle_right)
 
@@ -275,6 +278,7 @@ class Ui_MainWindow(object):
         self.TasiyiciHiziLabel_2.setText(QCoreApplication.translate("MainWindow", u"12 m/s", None))
         self.PilGerilimiLabel.setText(QCoreApplication.translate("MainWindow", u"Pil Gerilimi:", None))
         self.PilGerilimiLabel_2.setText(QCoreApplication.translate("MainWindow", u"7 V", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.camera_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.camera_button.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
     # retranslateUi
 

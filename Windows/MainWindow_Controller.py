@@ -11,7 +11,7 @@ class MainWindow_Controller():
        # self.timer = QTimer()
        # self.timer.timeout.connect(self.receive_data)
        # self.timer.start(1000)  # 1000 ms = 1 saniye
-   
+
 
     def pbtn_start_clicked(self):
         self.ui.pushButton.setText("")

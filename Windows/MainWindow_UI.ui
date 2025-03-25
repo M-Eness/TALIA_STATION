@@ -303,47 +303,6 @@
          <property name="frameShadow">
           <enum>QFrame::Shadow::Raised</enum>
          </property>
-         <widget class="QPushButton" name="pushButton">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>440</y>
-            <width>100</width>
-            <height>32</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background: qlineargradient(
-        spread:pad, x1:0, y1:0, x2:1, y2:1,
-        stop:0 rgba(156, 164, 172, 255), /* Açık gri-mavi */
-        stop:0.5 rgba(120, 130, 140, 255), /* Orta ton */
-        stop:1 rgba(90, 100, 110, 255) /* Daha koyu gölge */
-    );
-    color: white;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 8px;
-}
-
-/* Butona basıldığında (tıklama efekti) */
-QPushButton:pressed {
-    background: qlineargradient(
-        spread:pad, x1:0, y1:0, x2:1, y2:1,
-        stop:0 rgba(120, 130, 140, 255),
-        stop:1 rgba(90, 100, 110, 255)
-    );
-}
-
-
-/*background-color:rgb(156, 164, 172);
- border-radius: 10px;*/</string>
-          </property>
-          <property name="text">
-           <string>PushButton</string>
-          </property>
-         </widget>
         </widget>
        </item>
        <item>
@@ -383,17 +342,58 @@ QPushButton:pressed {
          <property name="frameShadow">
           <enum>QFrame::Shadow::Raised</enum>
          </property>
-         <widget class="QLabel" name="CameraLabel">
+         <widget class="QLabel" name="camera_label">
           <property name="geometry">
            <rect>
-            <x>17</x>
-            <y>15</y>
-            <width>221</width>
-            <height>461</height>
+            <x>27</x>
+            <y>85</y>
+            <width>211</width>
+            <height>391</height>
            </rect>
           </property>
           <property name="text">
            <string>TextLabel</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="camera_button">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>40</y>
+            <width>100</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(156, 164, 172, 255), /* Açık gri-mavi */
+        stop:0.5 rgba(120, 130, 140, 255), /* Orta ton */
+        stop:1 rgba(90, 100, 110, 255) /* Daha koyu gölge */
+    );
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+/* Butona basıldığında (tıklama efekti) */
+QPushButton:pressed {
+    background: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 rgba(120, 130, 140, 255),
+        stop:1 rgba(90, 100, 110, 255)
+    );
+}
+
+
+/*background-color:rgb(156, 164, 172);
+ border-radius: 10px;*/</string>
+          </property>
+          <property name="text">
+           <string>PushButton</string>
           </property>
          </widget>
         </widget>
