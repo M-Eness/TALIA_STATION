@@ -17,20 +17,23 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QMainWindow, QSizePolicy, QStatusBar, QVBoxLayout,
-    QWidget)
+    QMainWindow, QPlainTextEdit, QPushButton, QSizePolicy,
+    QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1440, 900)
+        MainWindow.resize(927, 800)
+        MainWindow.setMaximumSize(QSize(1500, 800))
+        MainWindow.setStyleSheet(u"background-color: rgb(46, 68, 99)")
         self.actionKopyala = QAction(MainWindow)
         self.actionKopyala.setObjectName(u"actionKopyala")
         self.actionYap_t_r = QAction(MainWindow)
         self.actionYap_t_r.setObjectName(u"actionYap_t_r")
         self.wgt_main = QWidget(MainWindow)
         self.wgt_main.setObjectName(u"wgt_main")
+        self.wgt_main.setStyleSheet(u"background-color: rgb(46, 68, 99);")
         self.verticalLayout = QVBoxLayout(self.wgt_main)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.frm_top = QFrame(self.wgt_main)
@@ -152,6 +155,7 @@ class Ui_MainWindow(object):
 
         self.frm_middle = QFrame(self.wgt_main)
         self.frm_middle.setObjectName(u"frm_middle")
+        self.frm_middle.setStyleSheet(u"background-color: rgb(13, 17, 23)")
         self.frm_middle.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frm_middle)
@@ -160,13 +164,46 @@ class Ui_MainWindow(object):
         self.frm_middle_left.setObjectName(u"frm_middle_left")
         self.frm_middle_left.setMinimumSize(QSize(250, 0))
         self.frm_middle_left.setMaximumSize(QSize(250, 16777215))
+        self.frm_middle_left.setStyleSheet(u"background-color: rgb(118, 152, 194);\n"
+"/*rgb(155, 195, 244)")
         self.frm_middle_left.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle_left.setFrameShadow(QFrame.Shadow.Raised)
+        self.pushButton = QPushButton(self.frm_middle_left)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(70, 440, 100, 32))
+        self.pushButton.setStyleSheet(u"QPushButton {\n"
+"    background: qlineargradient(\n"
+"        spread:pad, x1:0, y1:0, x2:1, y2:1,\n"
+"        stop:0 rgba(156, 164, 172, 255), /* A\u00e7\u0131k gri-mavi */\n"
+"        stop:0.5 rgba(120, 130, 140, 255), /* Orta ton */\n"
+"        stop:1 rgba(90, 100, 110, 255) /* Daha koyu g\u00f6lge */\n"
+"    );\n"
+"    color: white;\n"
+"    border-radius: 8px;\n"
+"    font-size: 14px;\n"
+"    font-weight: bold;\n"
+"    padding: 8px;\n"
+"}\n"
+"\n"
+"/* Butona bas\u0131ld\u0131\u011f\u0131nda (t\u0131klama efekti) */\n"
+"QPushButton:pressed {\n"
+"    background: qlineargradient(\n"
+"        spread:pad, x1:0, y1:0, x2:1, y2:1,\n"
+"        stop:0 rgba(120, 130, 140, 255),\n"
+"        stop:1 rgba(90, 100, 110, 255)\n"
+"    );\n"
+"}\n"
+"\n"
+"\n"
+"/*background-color:rgb(156, 164, 172);\n"
+" border-radius: 10px;*/")
 
         self.horizontalLayout_3.addWidget(self.frm_middle_left)
 
         self.frm_middle_middle = QFrame(self.frm_middle)
         self.frm_middle_middle.setObjectName(u"frm_middle_middle")
+        self.frm_middle_middle.setStyleSheet(u"background-color: rgb(5, 69, 105);\n"
+"")
         self.frm_middle_middle.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle_middle.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -175,7 +212,8 @@ class Ui_MainWindow(object):
         self.frm_middle_right = QFrame(self.frm_middle)
         self.frm_middle_right.setObjectName(u"frm_middle_right")
         self.frm_middle_right.setMinimumSize(QSize(250, 0))
-        self.frm_middle_right.setMaximumSize(QSize(250, 16777215))
+        self.frm_middle_right.setMaximumSize(QSize(250, 500))
+        self.frm_middle_right.setStyleSheet(u"background-color: rgb(118, 152, 194);")
         self.frm_middle_right.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle_right.setFrameShadow(QFrame.Shadow.Raised)
 
@@ -193,6 +231,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_4 = QVBoxLayout()
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.terminal_plainTextEdit = QPlainTextEdit(self.frm_bottom)
+        self.terminal_plainTextEdit.setObjectName(u"terminal_plainTextEdit")
+        self.terminal_plainTextEdit.setStyleSheet(u"background-color: rgb(71, 69, 71);\n"
+"")
+
+        self.verticalLayout_4.addWidget(self.terminal_plainTextEdit)
+
 
         self.verticalLayout_5.addLayout(self.verticalLayout_4)
 
@@ -230,5 +275,6 @@ class Ui_MainWindow(object):
         self.TasiyiciHiziLabel_2.setText(QCoreApplication.translate("MainWindow", u"12 m/s", None))
         self.PilGerilimiLabel.setText(QCoreApplication.translate("MainWindow", u"Pil Gerilimi:", None))
         self.PilGerilimiLabel_2.setText(QCoreApplication.translate("MainWindow", u"7 V", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
     # retranslateUi
 
