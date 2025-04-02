@@ -6,6 +6,7 @@ from CameraThread import CameraThread
 
 
 class CameraWindow(QMainWindow):
+    a = "asdşak"
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Kamera Görüntüsü")
