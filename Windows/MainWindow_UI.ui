@@ -53,224 +53,507 @@
       <property name="frameShadow">
        <enum>QFrame::Shadow::Raised</enum>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QLabel" name="SicaklikLabel">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Sıcaklık:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="BasincLabel_2">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>20 C</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="BasincLabel">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Basinc:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="BasincLabel_3">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>0.9 ATM</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="GorevYukuYukseklikLabel">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>20</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Görev Yükü Yükseklik:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="GorevYukuYukseklikLabel_2">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>20</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>300 m</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="TasiyiciYukseklikLabel">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>20</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Taşıyıcı Yükseklik:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="TasiyiciYukseklikLabel_2">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>20</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>250 m</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="IrtifaFarkiLabel">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>İrtifa Farkı:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="IrtifaFarkiLabel_2">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>50 m</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="GorevYukuHizLabel">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Görev Yükü Hızı:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="GorevYukuHizLabel_2">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>10 m/s</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="TasiyiciHiziLabel">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Taşıyıcı Hızı:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="TasiyiciHiziLabel_2">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>12 m/s</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="PilGerilimiLabel">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Pil Gerilimi:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="PilGerilimiLabel_2">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>7 V</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-      </layout>
+      <widget class="QLabel" name="SicaklikLabel">
+       <property name="geometry">
+        <rect>
+         <x>354</x>
+         <y>17</y>
+         <width>63</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Sıcaklık:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>449</x>
+         <y>-10</y>
+         <width>53</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Basınç 1:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="BasincLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>425</x>
+         <y>17</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>20</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>1369</x>
+         <y>-10</y>
+         <width>22</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>100</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="BasincLabel">
+       <property name="geometry">
+        <rect>
+         <x>568</x>
+         <y>17</y>
+         <width>44</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Basınç:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>111</x>
+         <y>-10</y>
+         <width>84</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Uydu Statüsü:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>203</x>
+         <y>-10</y>
+         <width>9</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="TasiyiciYukseklikLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>910</x>
+         <y>15</y>
+         <width>39</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>250 m</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="PilGerilimiLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>1249</x>
+         <y>17</y>
+         <width>20</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>7 V</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>312</x>
+         <y>-10</y>
+         <width>34</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>13.00</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="PilGerilimiLabel">
+       <property name="geometry">
+        <rect>
+         <x>1174</x>
+         <y>17</y>
+         <width>67</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Pil Gerilimi:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="BasincLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>17</y>
+         <width>50</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>0.9 ATM</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>97</x>
+         <y>-10</y>
+         <width>6</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>1029</x>
+         <y>-10</y>
+         <width>31</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>50 m</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>957</x>
+         <y>-10</y>
+         <width>64</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>İrtifa Farkı:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="GorevYukuHizLabel">
+       <property name="geometry">
+        <rect>
+         <x>1068</x>
+         <y>17</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>İniş Hızı:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="GorevYukuHizLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>1127</x>
+         <y>17</y>
+         <width>39</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>10 m/s</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>-10</y>
+         <width>85</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Paket Numarası:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>-10</y>
+         <width>84</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Gönderme Saati:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="GorevYukuYukseklikLabel">
+       <property name="geometry">
+        <rect>
+         <x>678</x>
+         <y>15</y>
+         <width>85</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Görev Yükü Yükseklik:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>-10</y>
+         <width>50</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0.9 ATM</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="TasiyiciYukseklikLabel">
+       <property name="geometry">
+        <rect>
+         <x>818</x>
+         <y>15</y>
+         <width>84</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Taşıyıcı Yükseklik:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>1277</x>
+         <y>-10</y>
+         <width>84</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pil Durumu %:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="GorevYukuYukseklikLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>771</x>
+         <y>15</y>
+         <width>39</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>300 m</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>GPS1 LATITUDE:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>70</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>GPS1 LONGITUDE:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>70</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>GPS1 ALTITUDE:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>70</y>
+         <width>58</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pitch:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_17">
+       <property name="geometry">
+        <rect>
+         <x>830</x>
+         <y>70</y>
+         <width>58</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Roll:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>940</x>
+         <y>70</y>
+         <width>58</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Yaw:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>1310</x>
+         <y>70</y>
+         <width>58</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Takım No:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>70</y>
+         <width>58</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string> S1 Data:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>1180</x>
+         <y>70</y>
+         <width>58</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>S2 Data:</string>
+       </property>
+      </widget>
      </widget>
     </item>
     <item>
@@ -637,48 +920,7 @@ QPushButton:disabled {
            </rect>
           </property>
           <property name="text">
-           <string>TextLabel</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="camera_button">
-          <property name="geometry">
-           <rect>
-            <x>80</x>
-            <y>40</y>
-            <width>100</width>
-            <height>32</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    background: qlineargradient(
-        spread:pad, x1:0, y1:0, x2:1, y2:1,
-        stop:0 rgba(156, 164, 172, 255), /* Açık gri-mavi */
-        stop:0.5 rgba(120, 130, 140, 255), /* Orta ton */
-        stop:1 rgba(90, 100, 110, 255) /* Daha koyu gölge */
-    );
-    color: white;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 8px;
-}
-
-/* Butona basıldığında (tıklama efekti) */
-QPushButton:pressed {
-    background: qlineargradient(
-        spread:pad, x1:0, y1:0, x2:1, y2:1,
-        stop:0 rgba(120, 130, 140, 255),
-        stop:1 rgba(90, 100, 110, 255)
-    );
-}
-
-
-/*background-color:rgb(156, 164, 172);
- border-radius: 10px;*/</string>
-          </property>
-          <property name="text">
-           <string>PushButton</string>
+           <string/>
           </property>
          </widget>
         </widget>
