@@ -1,9 +1,10 @@
 from PySide6.QtGui import QPixmap, Qt
-from PySide6.QtWidgets import QMainWindow
+from PySide6.QtWidgets import QMainWindow, QVBoxLayout
 
 from Camera.CameraThread import CameraThread
 from ClientServer.ClientThread import ClientThread
 from GPS.GPSClientThread import GPSClientThread
+from Windows.ArasBar import ArasBar
 from Windows.MainWindow_Controller import MainWindow_Controller
 from Windows.MainWindow_UI import Ui_MainWindow
 from Windows.Graph import Graph
@@ -18,6 +19,12 @@ class MainWindow_Form(QMainWindow):
         ## Grafik ekleme kısmı
         self.graphs = []
         positions = [(0, 0), (0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]  # 3x3 grid gibi
+
+        aras_layout = QVBoxLayout(self.ui.arasWidget)
+        self.ui.arasWidget.setLayout(aras_layout)
+        aras = ArasBar()
+        aras_layout.addWidget(aras)
+
 
         for i, pos in enumerate(positions):
             graph = Graph()
@@ -48,6 +55,8 @@ class MainWindow_Form(QMainWindow):
     def add_log(self, text):
         """Terminale yeni satır ekler."""
         self.ui.terminal_plainTextEdit.appendPlainText(text)
+
+
 
     def update_camera_frame(self, image):
         """Kamera görüntüsünü QLabel içinde güncelle"""

@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1440, 800)
+        MainWindow.resize(1440, 812)
         MainWindow.setMinimumSize(QSize(1000, 600))
         MainWindow.setMaximumSize(QSize(1440, 900))
         MainWindow.setStyleSheet(u"background-color: rgb(46, 68, 99)")
@@ -169,6 +169,195 @@ class Ui_MainWindow(object):
 "/*rgb(155, 195, 244)")
         self.frm_middle_left.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle_left.setFrameShadow(QFrame.Shadow.Raised)
+        self.arasWidget = QWidget(self.frm_middle_left)
+        self.arasWidget.setObjectName(u"arasWidget")
+        self.arasWidget.setGeometry(QRect(40, 410, 201, 101))
+        self.sistemBaslatButton = QPushButton(self.frm_middle_left)
+        self.sistemBaslatButton.setObjectName(u"sistemBaslatButton")
+        self.sistemBaslatButton.setGeometry(QRect(60, 50, 171, 51))
+        self.sistemBaslatButton.setStyleSheet(u"QPushButton {\n"
+"    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
+"    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
+"    padding: 8px 16px;\n"
+"    border-radius: 5px;\n"
+"    font-size: 14px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #6A0DAD; /* \u00dczerine gelince biraz daha morumsu kapal\u0131 bordo */\n"
+"    border: 1px solid #800000;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #A52A2A; /* Brown (k\u0131z\u0131l kahvemsi kapal\u0131 bordo) */\n"
+"    border: 1px solid #8B0000; /* Daha derin bordo \u00e7er\u00e7eve */\n"
+"    padding-left: 10px;\n"
+"    padding-top: 10px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #A0522D; /* Sienna (soluk, toprak tonlu bordo) */\n"
+"    border: 1px solid #800000;\n"
+"    color: #CD853F; /* Peru */\n"
+"}")
+        self.telemetriAlButton = QPushButton(self.frm_middle_left)
+        self.telemetriAlButton.setObjectName(u"telemetriAlButton")
+        self.telemetriAlButton.setGeometry(QRect(60, 120, 171, 41))
+        self.telemetriAlButton.setStyleSheet(u"QPushButton {\n"
+"    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
+"    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
+"    padding: 8px 16px;\n"
+"    border-radius: 5px;\n"
+"    font-size: 14px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #6A0DAD; /* \u00dczerine gelince biraz daha morumsu kapal\u0131 bordo */\n"
+"    border: 1px solid #800000;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #A52A2A; /* Brown (k\u0131z\u0131l kahvemsi kapal\u0131 bordo) */\n"
+"    border: 1px solid #8B0000; /* Daha derin bordo \u00e7er\u00e7eve */\n"
+"    padding-left: 10px;\n"
+"    padding-top: 10px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #A0522D; /* Sienna (soluk, toprak tonlu bordo) */\n"
+"    border: 1px solid #800000;\n"
+"    color: #CD853F; /* Peru */\n"
+"}")
+        self.ayrilmaGerceklestirButton = QPushButton(self.frm_middle_left)
+        self.ayrilmaGerceklestirButton.setObjectName(u"ayrilmaGerceklestirButton")
+        self.ayrilmaGerceklestirButton.setGeometry(QRect(60, 180, 171, 41))
+        self.ayrilmaGerceklestirButton.setStyleSheet(u"QPushButton {\n"
+"    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
+"    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
+"    padding: 8px 16px;\n"
+"    border-radius: 5px;\n"
+"    font-size: 14px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #6A0DAD; /* \u00dczerine gelince biraz daha morumsu kapal\u0131 bordo */\n"
+"    border: 1px solid #800000;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #A52A2A; /* Brown (k\u0131z\u0131l kahvemsi kapal\u0131 bordo) */\n"
+"    border: 1px solid #8B0000; /* Daha derin bordo \u00e7er\u00e7eve */\n"
+"    padding-left: 10px;\n"
+"    padding-top: 10px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #A0522D; /* Sienna (soluk, toprak tonlu bordo) */\n"
+"    border: 1px solid #800000;\n"
+"    color: #CD853F; /* Peru */\n"
+"}")
+        self.videoSecButton = QPushButton(self.frm_middle_left)
+        self.videoSecButton.setObjectName(u"videoSecButton")
+        self.videoSecButton.setGeometry(QRect(60, 240, 171, 41))
+        self.videoSecButton.setStyleSheet(u"QPushButton {\n"
+"    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
+"    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
+"    padding: 8px 16px;\n"
+"    border-radius: 5px;\n"
+"    font-size: 14px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #6A0DAD; /* \u00dczerine gelince biraz daha morumsu kapal\u0131 bordo */\n"
+"    border: 1px solid #800000;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #A52A2A; /* Brown (k\u0131z\u0131l kahvemsi kapal\u0131 bordo) */\n"
+"    border: 1px solid #8B0000; /* Daha derin bordo \u00e7er\u00e7eve */\n"
+"    padding-left: 10px;\n"
+"    padding-top: 10px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #A0522D; /* Sienna (soluk, toprak tonlu bordo) */\n"
+"    border: 1px solid #800000;\n"
+"    color: #CD853F; /* Peru */\n"
+"}")
+        self.videoGonderButton = QPushButton(self.frm_middle_left)
+        self.videoGonderButton.setObjectName(u"videoGonderButton")
+        self.videoGonderButton.setGeometry(QRect(60, 300, 171, 41))
+        self.videoGonderButton.setStyleSheet(u"QPushButton {\n"
+"    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
+"    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
+"    padding: 8px 16px;\n"
+"    border-radius: 5px;\n"
+"    font-size: 14px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #6A0DAD; /* \u00dczerine gelince biraz daha morumsu kapal\u0131 bordo */\n"
+"    border: 1px solid #800000;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #A52A2A; /* Brown (k\u0131z\u0131l kahvemsi kapal\u0131 bordo) */\n"
+"    border: 1px solid #8B0000; /* Daha derin bordo \u00e7er\u00e7eve */\n"
+"    padding-left: 10px;\n"
+"    padding-top: 10px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #A0522D; /* Sienna (soluk, toprak tonlu bordo) */\n"
+"    border: 1px solid #800000;\n"
+"    color: #CD853F; /* Peru */\n"
+"}")
+        self.sistemDurdurButton = QPushButton(self.frm_middle_left)
+        self.sistemDurdurButton.setObjectName(u"sistemDurdurButton")
+        self.sistemDurdurButton.setGeometry(QRect(60, 360, 171, 41))
+        self.sistemDurdurButton.setStyleSheet(u"QPushButton {\n"
+"    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
+"    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
+"    padding: 8px 16px;\n"
+"    border-radius: 5px;\n"
+"    font-size: 14px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #6A0DAD; /* \u00dczerine gelince biraz daha morumsu kapal\u0131 bordo */\n"
+"    border: 1px solid #800000;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #A52A2A; /* Brown (k\u0131z\u0131l kahvemsi kapal\u0131 bordo) */\n"
+"    border: 1px solid #8B0000; /* Daha derin bordo \u00e7er\u00e7eve */\n"
+"    padding-left: 10px;\n"
+"    padding-top: 10px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #A0522D; /* Sienna (soluk, toprak tonlu bordo) */\n"
+"    border: 1px solid #800000;\n"
+"    color: #CD853F; /* Peru */\n"
+"}")
 
         self.horizontalLayout_3.addWidget(self.frm_middle_left)
 
@@ -284,6 +473,12 @@ class Ui_MainWindow(object):
         self.TasiyiciHiziLabel_2.setText(QCoreApplication.translate("MainWindow", u"12 m/s", None))
         self.PilGerilimiLabel.setText(QCoreApplication.translate("MainWindow", u"Pil Gerilimi:", None))
         self.PilGerilimiLabel_2.setText(QCoreApplication.translate("MainWindow", u"7 V", None))
+        self.sistemBaslatButton.setText(QCoreApplication.translate("MainWindow", u"Sistemi Ba\u015flat", None))
+        self.telemetriAlButton.setText(QCoreApplication.translate("MainWindow", u"Telemetri Al", None))
+        self.ayrilmaGerceklestirButton.setText(QCoreApplication.translate("MainWindow", u"Ayr\u0131lmay\u0131 Ger\u00e7ekle\u015ftir", None))
+        self.videoSecButton.setText(QCoreApplication.translate("MainWindow", u"Video Se\u00e7", None))
+        self.videoGonderButton.setText(QCoreApplication.translate("MainWindow", u"Video G\u00f6nder", None))
+        self.sistemDurdurButton.setText(QCoreApplication.translate("MainWindow", u"Sistemi Durdur", None))
         self.camera_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.camera_button.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
     # retranslateUi
