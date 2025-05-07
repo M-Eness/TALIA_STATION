@@ -6,7 +6,7 @@ from ClientServer.ClientThread import ClientThread
 from GPS.GPSClientThread import GPSClientThread
 from Windows.MainWindow_Controller import MainWindow_Controller
 from Windows.MainWindow_UI import Ui_MainWindow
-import socket
+from Windows.MyGraph import MyGraph
 
 
 class MainWindow_Form(QMainWindow):
@@ -15,6 +15,21 @@ class MainWindow_Form(QMainWindow):
         self.ui=  Ui_MainWindow()
         self.ui.setupUi(self)
         self.cntlr= MainWindow_Controller(self, self.ui)
+        ## Grafik ekleme kısmı
+        self.graphs = []
+        positions = [(0, 0), (0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]  # 3x3 grid gibi
+
+        for i, pos in enumerate(positions):
+            graph = MyGraph()
+            self.graphs.append(graph)
+            self.ui.graphs_container.layout().addWidget(graph, *pos)
+
+            # Test verisiyle (sonra buraya uydu verisi koyarız)
+        import numpy as np
+        for idx, graph in enumerate(self.graphs):
+            dummy_data = np.sin(np.linspace(0, 10, 100) + idx)
+            graph.plot_data(dummy_data, title=f"Grafik {idx + 1}")
+        ###
 
         # Soket istemcisi thread'i başlat
         self.client_thread = ClientThread(host="localhost", port=7001)

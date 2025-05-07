@@ -16,9 +16,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QMainWindow, QPlainTextEdit, QPushButton, QSizePolicy,
-    QStatusBar, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
+    QLabel, QMainWindow, QPlainTextEdit, QPushButton,
+    QSizePolicy, QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -163,7 +163,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.frm_middle_left = QFrame(self.frm_middle)
         self.frm_middle_left.setObjectName(u"frm_middle_left")
-        self.frm_middle_left.setMinimumSize(QSize(250, 0))
+        self.frm_middle_left.setMinimumSize(QSize(300, 0))
         self.frm_middle_left.setMaximumSize(QSize(250, 16777215))
         self.frm_middle_left.setStyleSheet(u"background-color: rgb(118, 152, 194);\n"
 "/*rgb(155, 195, 244)")
@@ -178,19 +178,24 @@ class Ui_MainWindow(object):
 "")
         self.frm_middle_middle.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle_middle.setFrameShadow(QFrame.Shadow.Raised)
+        self.graphs_container = QWidget(self.frm_middle_middle)
+        self.graphs_container.setObjectName(u"graphs_container")
+        self.graphs_container.setGeometry(QRect(0, 0, 761, 491))
+        self.gridLayout = QGridLayout(self.graphs_container)
+        self.gridLayout.setObjectName(u"gridLayout")
 
         self.horizontalLayout_3.addWidget(self.frm_middle_middle)
 
         self.frm_middle_right = QFrame(self.frm_middle)
         self.frm_middle_right.setObjectName(u"frm_middle_right")
-        self.frm_middle_right.setMinimumSize(QSize(250, 0))
-        self.frm_middle_right.setMaximumSize(QSize(500, 500))
+        self.frm_middle_right.setMinimumSize(QSize(300, 0))
+        self.frm_middle_right.setMaximumSize(QSize(250, 500))
         self.frm_middle_right.setStyleSheet(u"background-color: rgb(118, 152, 194);")
         self.frm_middle_right.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle_right.setFrameShadow(QFrame.Shadow.Raised)
         self.camera_label = QLabel(self.frm_middle_right)
         self.camera_label.setObjectName(u"camera_label")
-        self.camera_label.setGeometry(QRect(27, 85, 451, 351))
+        self.camera_label.setGeometry(QRect(27, 85, 211, 111))
         self.camera_button = QPushButton(self.frm_middle_right)
         self.camera_button.setObjectName(u"camera_button")
         self.camera_button.setGeometry(QRect(80, 40, 100, 32))
