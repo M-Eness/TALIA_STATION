@@ -6,7 +6,7 @@ from ClientServer.ClientThread import ClientThread
 from GPS.GPSClientThread import GPSClientThread
 from Windows.MainWindow_Controller import MainWindow_Controller
 from Windows.MainWindow_UI import Ui_MainWindow
-from Windows.MyGraph import MyGraph
+from Windows.Graph import Graph
 
 
 class MainWindow_Form(QMainWindow):
@@ -20,7 +20,7 @@ class MainWindow_Form(QMainWindow):
         positions = [(0, 0), (0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]  # 3x3 grid gibi
 
         for i, pos in enumerate(positions):
-            graph = MyGraph()
+            graph = Graph()
             self.graphs.append(graph)
             self.ui.graphs_container.layout().addWidget(graph, *pos)
 
