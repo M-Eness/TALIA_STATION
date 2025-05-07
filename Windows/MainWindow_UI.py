@@ -17,8 +17,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QMainWindow, QPlainTextEdit, QPushButton,
-    QSizePolicy, QStatusBar, QVBoxLayout, QWidget)
+    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
+    QPushButton, QSizePolicy, QStatusBar, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -174,10 +175,10 @@ class Ui_MainWindow(object):
         self.frm_middle_left.setFrameShadow(QFrame.Shadow.Raised)
         self.arasWidget = QWidget(self.frm_middle_left)
         self.arasWidget.setObjectName(u"arasWidget")
-        self.arasWidget.setGeometry(QRect(40, 410, 201, 101))
+        self.arasWidget.setGeometry(QRect(50, 320, 201, 91))
         self.sistemBaslatButton = QPushButton(self.frm_middle_left)
         self.sistemBaslatButton.setObjectName(u"sistemBaslatButton")
-        self.sistemBaslatButton.setGeometry(QRect(60, 50, 171, 51))
+        self.sistemBaslatButton.setGeometry(QRect(60, 20, 171, 38))
         self.sistemBaslatButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
 "    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
@@ -208,7 +209,7 @@ class Ui_MainWindow(object):
 "}")
         self.telemetriAlButton = QPushButton(self.frm_middle_left)
         self.telemetriAlButton.setObjectName(u"telemetriAlButton")
-        self.telemetriAlButton.setGeometry(QRect(60, 120, 171, 41))
+        self.telemetriAlButton.setGeometry(QRect(60, 70, 171, 38))
         self.telemetriAlButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
 "    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
@@ -239,7 +240,7 @@ class Ui_MainWindow(object):
 "}")
         self.ayrilmaGerceklestirButton = QPushButton(self.frm_middle_left)
         self.ayrilmaGerceklestirButton.setObjectName(u"ayrilmaGerceklestirButton")
-        self.ayrilmaGerceklestirButton.setGeometry(QRect(60, 180, 171, 41))
+        self.ayrilmaGerceklestirButton.setGeometry(QRect(60, 120, 171, 38))
         self.ayrilmaGerceklestirButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
 "    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
@@ -270,7 +271,7 @@ class Ui_MainWindow(object):
 "}")
         self.videoSecButton = QPushButton(self.frm_middle_left)
         self.videoSecButton.setObjectName(u"videoSecButton")
-        self.videoSecButton.setGeometry(QRect(60, 240, 171, 41))
+        self.videoSecButton.setGeometry(QRect(60, 170, 171, 38))
         self.videoSecButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
 "    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
@@ -301,7 +302,7 @@ class Ui_MainWindow(object):
 "}")
         self.videoGonderButton = QPushButton(self.frm_middle_left)
         self.videoGonderButton.setObjectName(u"videoGonderButton")
-        self.videoGonderButton.setGeometry(QRect(60, 300, 171, 41))
+        self.videoGonderButton.setGeometry(QRect(60, 220, 171, 38))
         self.videoGonderButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
 "    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
@@ -332,8 +333,49 @@ class Ui_MainWindow(object):
 "}")
         self.sistemDurdurButton = QPushButton(self.frm_middle_left)
         self.sistemDurdurButton.setObjectName(u"sistemDurdurButton")
-        self.sistemDurdurButton.setGeometry(QRect(60, 360, 171, 41))
+        self.sistemDurdurButton.setGeometry(QRect(60, 270, 171, 38))
         self.sistemDurdurButton.setStyleSheet(u"QPushButton {\n"
+"    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
+"    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
+"    padding: 8px 16px;\n"
+"    border-radius: 5px;\n"
+"    font-size: 14px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #6A0DAD; /* \u00dczerine gelince biraz daha morumsu kapal\u0131 bordo */\n"
+"    border: 1px solid #800000;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #A52A2A; /* Brown (k\u0131z\u0131l kahvemsi kapal\u0131 bordo) */\n"
+"    border: 1px solid #8B0000; /* Daha derin bordo \u00e7er\u00e7eve */\n"
+"    padding-left: 10px;\n"
+"    padding-top: 10px;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: #A0522D; /* Sienna (soluk, toprak tonlu bordo) */\n"
+"    border: 1px solid #800000;\n"
+"    color: #CD853F; /* Peru */\n"
+"}")
+        self.rhrh_input = QLineEdit(self.frm_middle_left)
+        self.rhrh_input.setObjectName(u"rhrh_input")
+        self.rhrh_input.setGeometry(QRect(60, 430, 171, 25))
+        self.rhrh_input.setStyleSheet(u"QLineEdit {\n"
+"    background-color: white;\n"
+"    color: black;\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 5px;\n"
+"    padding: 4px;\n"
+"}")
+        self.rhrh_button = QPushButton(self.frm_middle_left)
+        self.rhrh_button.setObjectName(u"rhrh_button")
+        self.rhrh_button.setGeometry(QRect(60, 470, 171, 38))
+        self.rhrh_button.setStyleSheet(u"QPushButton {\n"
 "    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
 "    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
 "    padding: 8px 16px;\n"
@@ -470,6 +512,7 @@ class Ui_MainWindow(object):
         self.videoSecButton.setText(QCoreApplication.translate("MainWindow", u"Video Se\u00e7", None))
         self.videoGonderButton.setText(QCoreApplication.translate("MainWindow", u"Video G\u00f6nder", None))
         self.sistemDurdurButton.setText(QCoreApplication.translate("MainWindow", u"Sistemi Durdur", None))
+        self.rhrh_button.setText(QCoreApplication.translate("MainWindow", u"RHRH KODU GONDER", None))
         self.camera_label.setText("")
     # retranslateUi
 

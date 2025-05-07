@@ -12,19 +12,19 @@ from Windows.Graph import Graph
 
 class MainWindow_Form(QMainWindow):
     def __init__(self):
-        super(MainWindow_Form,self).__init__()
-        self.ui=  Ui_MainWindow()
+        super(MainWindow_Form, self).__init__()
+        self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.cntlr= MainWindow_Controller(self, self.ui)
+        self.cntlr = MainWindow_Controller(self, self.ui)
         ## Grafik ekleme kısmı
         self.graphs = []
         positions = [(0, 0), (0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]  # 3x3 grid gibi
+        self.ui.rhrh_button.clicked.connect(self.gonder_rhrh_kodu)
 
         aras_layout = QVBoxLayout(self.ui.arasWidget)
         self.ui.arasWidget.setLayout(aras_layout)
         aras = ArasBar()
         aras_layout.addWidget(aras)
-
 
         for i, pos in enumerate(positions):
             graph = Graph()
@@ -51,12 +51,14 @@ class MainWindow_Form(QMainWindow):
         self.gps_thread.received_gps.connect(self.update_gps_label)
         self.gps_thread.start()
 
+    def gonder_rhrh_kodu(self):
+        kod = self.ui.rhrh_input.text()
+        print(f"Gönderilen RHRH Kodu: {kod}")
+        self.ui.rhrh_input.clear()
 
     def add_log(self, text):
         """Terminale yeni satır ekler."""
         self.ui.terminal_plainTextEdit.appendPlainText(text)
-
-
 
     def update_camera_frame(self, image):
         """Kamera görüntüsünü QLabel içinde güncelle"""
@@ -66,6 +68,7 @@ class MainWindow_Form(QMainWindow):
 
     def update_gps_label(self, gps_text):
         self.ui.GorevYukuYukseklikLabel_2.setText(gps_text)
+
     def closeEvent(self, event):
         """Pencere kapatıldığında thread'leri durdur"""
         self.gps_thread.stop()
@@ -75,6 +78,6 @@ class MainWindow_Form(QMainWindow):
         self.camera_thread.wait()
         event.accept()
 
-        #self.initilizeComponents()
+        # self.initilizeComponents()
 
- #   def initilizeComponents(self):
+#   def initilizeComponents(self):
