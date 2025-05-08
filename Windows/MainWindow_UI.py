@@ -17,9 +17,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
-    QPushButton, QSizePolicy, QStatusBar, QVBoxLayout,
-    QWidget)
+    QLabel, QLayout, QLineEdit, QMainWindow,
+    QPlainTextEdit, QPushButton, QSizePolicy, QStatusBar,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -44,117 +44,205 @@ class Ui_MainWindow(object):
         self.frm_top.setMaximumSize(QSize(16777215, 100))
         self.frm_top.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_top.setFrameShadow(QFrame.Shadow.Raised)
-        self.SicaklikLabel = QLabel(self.frm_top)
-        self.SicaklikLabel.setObjectName(u"SicaklikLabel")
-        self.SicaklikLabel.setGeometry(QRect(354, 17, 63, 16))
-        self.SicaklikLabel.setMaximumSize(QSize(16777215, 16))
-        self.label_7 = QLabel(self.frm_top)
-        self.label_7.setObjectName(u"label_7")
-        self.label_7.setGeometry(QRect(449, -10, 53, 70))
-        self.BasincLabel_2 = QLabel(self.frm_top)
-        self.BasincLabel_2.setObjectName(u"BasincLabel_2")
-        self.BasincLabel_2.setGeometry(QRect(425, 17, 16, 16))
-        self.BasincLabel_2.setMaximumSize(QSize(16777215, 16))
-        self.label_10 = QLabel(self.frm_top)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(1369, -10, 22, 70))
-        self.BasincLabel = QLabel(self.frm_top)
-        self.BasincLabel.setObjectName(u"BasincLabel")
-        self.BasincLabel.setGeometry(QRect(568, 17, 44, 16))
-        self.BasincLabel.setMaximumSize(QSize(16777215, 16))
-        self.label_3 = QLabel(self.frm_top)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(111, -10, 84, 70))
-        self.label_4 = QLabel(self.frm_top)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(203, -10, 9, 70))
-        self.TasiyiciYukseklikLabel_2 = QLabel(self.frm_top)
-        self.TasiyiciYukseklikLabel_2.setObjectName(u"TasiyiciYukseklikLabel_2")
-        self.TasiyiciYukseklikLabel_2.setGeometry(QRect(910, 15, 39, 20))
-        self.TasiyiciYukseklikLabel_2.setMaximumSize(QSize(16777215, 20))
-        self.PilGerilimiLabel_2 = QLabel(self.frm_top)
-        self.PilGerilimiLabel_2.setObjectName(u"PilGerilimiLabel_2")
-        self.PilGerilimiLabel_2.setGeometry(QRect(1249, 17, 20, 16))
-        self.PilGerilimiLabel_2.setMaximumSize(QSize(16777215, 16))
-        self.label_6 = QLabel(self.frm_top)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(312, -10, 34, 70))
-        self.PilGerilimiLabel = QLabel(self.frm_top)
-        self.PilGerilimiLabel.setObjectName(u"PilGerilimiLabel")
-        self.PilGerilimiLabel.setGeometry(QRect(1174, 17, 67, 16))
-        self.PilGerilimiLabel.setMaximumSize(QSize(16777215, 16))
-        self.BasincLabel_3 = QLabel(self.frm_top)
-        self.BasincLabel_3.setObjectName(u"BasincLabel_3")
-        self.BasincLabel_3.setGeometry(QRect(620, 17, 50, 16))
-        self.BasincLabel_3.setMaximumSize(QSize(16777215, 16))
-        self.label_2 = QLabel(self.frm_top)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(97, -10, 6, 70))
-        self.label_12 = QLabel(self.frm_top)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setGeometry(QRect(1029, -10, 31, 70))
-        self.label_11 = QLabel(self.frm_top)
-        self.label_11.setObjectName(u"label_11")
-        self.label_11.setGeometry(QRect(957, -10, 64, 70))
-        self.GorevYukuHizLabel = QLabel(self.frm_top)
-        self.GorevYukuHizLabel.setObjectName(u"GorevYukuHizLabel")
-        self.GorevYukuHizLabel.setGeometry(QRect(1068, 17, 51, 16))
-        self.GorevYukuHizLabel.setMaximumSize(QSize(16777215, 16))
-        self.GorevYukuHizLabel_2 = QLabel(self.frm_top)
-        self.GorevYukuHizLabel_2.setObjectName(u"GorevYukuHizLabel_2")
-        self.GorevYukuHizLabel_2.setGeometry(QRect(1127, 17, 39, 16))
-        self.GorevYukuHizLabel_2.setMaximumSize(QSize(16777215, 16))
-        self.label = QLabel(self.frm_top)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(4, -10, 85, 70))
-        self.label_5 = QLabel(self.frm_top)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(220, -10, 84, 70))
-        self.GorevYukuYukseklikLabel = QLabel(self.frm_top)
+        self.widget = QWidget(self.frm_top)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(2, 13, 2220, 188))
+        self.gridLayoutTelemetry = QGridLayout(self.widget)
+        self.gridLayoutTelemetry.setObjectName(u"gridLayoutTelemetry")
+        self.gridLayoutTelemetry.setSizeConstraint(QLayout.SizeConstraint.SetFixedSize)
+        self.gridLayoutTelemetry.setContentsMargins(0, 0, 0, 0)
+        self.TakimNoLabel2 = QLabel(self.widget)
+        self.TakimNoLabel2.setObjectName(u"TakimNoLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.TakimNoLabel2, 1, 31, 2, 1)
+
+        self.GorevYukuYukseklikLabel = QLabel(self.widget)
         self.GorevYukuYukseklikLabel.setObjectName(u"GorevYukuYukseklikLabel")
-        self.GorevYukuYukseklikLabel.setGeometry(QRect(678, 15, 85, 20))
         self.GorevYukuYukseklikLabel.setMaximumSize(QSize(16777215, 20))
-        self.label_8 = QLabel(self.frm_top)
-        self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(510, -10, 50, 70))
-        self.TasiyiciYukseklikLabel = QLabel(self.frm_top)
+
+        self.gridLayoutTelemetry.addWidget(self.GorevYukuYukseklikLabel, 2, 9, 1, 1)
+
+        self.RollLabel = QLabel(self.widget)
+        self.RollLabel.setObjectName(u"RollLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.RollLabel, 1, 16, 1, 1)
+
+        self.S2Label2 = QLabel(self.widget)
+        self.S2Label2.setObjectName(u"S2Label2")
+
+        self.gridLayoutTelemetry.addWidget(self.S2Label2, 1, 21, 2, 1)
+
+        self.InisHiziLabel = QLabel(self.widget)
+        self.InisHiziLabel.setObjectName(u"InisHiziLabel")
+        self.InisHiziLabel.setMaximumSize(QSize(16777215, 16))
+
+        self.gridLayoutTelemetry.addWidget(self.InisHiziLabel, 2, 6, 1, 1)
+
+        self.TakimNoLabel = QLabel(self.widget)
+        self.TakimNoLabel.setObjectName(u"TakimNoLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.TakimNoLabel, 1, 18, 2, 1)
+
+        self.GpsLonLabel = QLabel(self.widget)
+        self.GpsLonLabel.setObjectName(u"GpsLonLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.GpsLonLabel, 1, 13, 2, 1)
+
+        self.GpsAltLabel2 = QLabel(self.widget)
+        self.GpsAltLabel2.setObjectName(u"GpsAltLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.GpsAltLabel2, 1, 29, 2, 1)
+
+        self.RollLabel2 = QLabel(self.widget)
+        self.RollLabel2.setObjectName(u"RollLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.RollLabel2, 1, 30, 2, 1)
+
+        self.TasiyiciYukseklikLabel2 = QLabel(self.widget)
+        self.TasiyiciYukseklikLabel2.setObjectName(u"TasiyiciYukseklikLabel2")
+        self.TasiyiciYukseklikLabel2.setMaximumSize(QSize(16777215, 20))
+
+        self.gridLayoutTelemetry.addWidget(self.TasiyiciYukseklikLabel2, 2, 8, 1, 1)
+
+        self.PitchLabel2 = QLabel(self.widget)
+        self.PitchLabel2.setObjectName(u"PitchLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.PitchLabel2, 1, 23, 2, 1)
+
+        self.YawLabel2 = QLabel(self.widget)
+        self.YawLabel2.setObjectName(u"YawLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.YawLabel2, 1, 24, 1, 1)
+
+        self.S2Label = QLabel(self.widget)
+        self.S2Label.setObjectName(u"S2Label")
+
+        self.gridLayoutTelemetry.addWidget(self.S2Label, 1, 20, 2, 1)
+
+        self.GpsLatLabel2 = QLabel(self.widget)
+        self.GpsLatLabel2.setObjectName(u"GpsLatLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.GpsLatLabel2, 1, 22, 1, 1)
+
+        self.GpsAltLabel = QLabel(self.widget)
+        self.GpsAltLabel.setObjectName(u"GpsAltLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.GpsAltLabel, 1, 14, 2, 1)
+
+        self.GpsLatLabel = QLabel(self.widget)
+        self.GpsLatLabel.setObjectName(u"GpsLatLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.GpsLatLabel, 1, 12, 2, 1)
+
+        self.S1Label2 = QLabel(self.widget)
+        self.S1Label2.setObjectName(u"S1Label2")
+
+        self.gridLayoutTelemetry.addWidget(self.S1Label2, 1, 25, 1, 1)
+
+        self.Basinc2Label = QLabel(self.widget)
+        self.Basinc2Label.setObjectName(u"Basinc2Label")
+        self.Basinc2Label.setMaximumSize(QSize(16777215, 16))
+
+        self.gridLayoutTelemetry.addWidget(self.Basinc2Label, 2, 2, 1, 1)
+
+        self.YawLabel = QLabel(self.widget)
+        self.YawLabel.setObjectName(u"YawLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.YawLabel, 1, 17, 1, 1)
+
+        self.GpsLonLabel2 = QLabel(self.widget)
+        self.GpsLonLabel2.setObjectName(u"GpsLonLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.GpsLonLabel2, 1, 28, 2, 1)
+
+        self.InisHiziLabel2 = QLabel(self.widget)
+        self.InisHiziLabel2.setObjectName(u"InisHiziLabel2")
+        self.InisHiziLabel2.setMaximumSize(QSize(16777215, 16))
+
+        self.gridLayoutTelemetry.addWidget(self.InisHiziLabel2, 2, 7, 1, 1)
+
+        self.SicaklikLabel = QLabel(self.widget)
+        self.SicaklikLabel.setObjectName(u"SicaklikLabel")
+        self.SicaklikLabel.setMaximumSize(QSize(16777215, 16))
+
+        self.gridLayoutTelemetry.addWidget(self.SicaklikLabel, 2, 0, 1, 1)
+
+        self.TasiyiciYukseklikLabel = QLabel(self.widget)
         self.TasiyiciYukseklikLabel.setObjectName(u"TasiyiciYukseklikLabel")
-        self.TasiyiciYukseklikLabel.setGeometry(QRect(818, 15, 84, 20))
         self.TasiyiciYukseklikLabel.setMaximumSize(QSize(16777215, 20))
-        self.label_9 = QLabel(self.frm_top)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(1277, -10, 84, 70))
-        self.GorevYukuYukseklikLabel_2 = QLabel(self.frm_top)
-        self.GorevYukuYukseklikLabel_2.setObjectName(u"GorevYukuYukseklikLabel_2")
-        self.GorevYukuYukseklikLabel_2.setGeometry(QRect(771, 15, 39, 20))
-        self.GorevYukuYukseklikLabel_2.setMaximumSize(QSize(16777215, 20))
-        self.label_13 = QLabel(self.frm_top)
-        self.label_13.setObjectName(u"label_13")
-        self.label_13.setGeometry(QRect(10, 70, 101, 16))
-        self.label_14 = QLabel(self.frm_top)
-        self.label_14.setObjectName(u"label_14")
-        self.label_14.setGeometry(QRect(230, 70, 121, 16))
-        self.label_15 = QLabel(self.frm_top)
-        self.label_15.setObjectName(u"label_15")
-        self.label_15.setGeometry(QRect(490, 70, 111, 16))
-        self.label_16 = QLabel(self.frm_top)
-        self.label_16.setObjectName(u"label_16")
-        self.label_16.setGeometry(QRect(700, 70, 58, 16))
-        self.label_17 = QLabel(self.frm_top)
-        self.label_17.setObjectName(u"label_17")
-        self.label_17.setGeometry(QRect(830, 70, 58, 16))
-        self.label_18 = QLabel(self.frm_top)
-        self.label_18.setObjectName(u"label_18")
-        self.label_18.setGeometry(QRect(940, 70, 58, 16))
-        self.label_19 = QLabel(self.frm_top)
-        self.label_19.setObjectName(u"label_19")
-        self.label_19.setGeometry(QRect(1310, 70, 58, 16))
-        self.label_20 = QLabel(self.frm_top)
-        self.label_20.setObjectName(u"label_20")
-        self.label_20.setGeometry(QRect(1050, 70, 58, 16))
-        self.label_21 = QLabel(self.frm_top)
-        self.label_21.setObjectName(u"label_21")
-        self.label_21.setGeometry(QRect(1180, 70, 58, 16))
+
+        self.gridLayoutTelemetry.addWidget(self.TasiyiciYukseklikLabel, 2, 10, 1, 1)
+
+        self.Basinc2Label2 = QLabel(self.widget)
+        self.Basinc2Label2.setObjectName(u"Basinc2Label2")
+        self.Basinc2Label2.setMaximumSize(QSize(16777215, 16))
+
+        self.gridLayoutTelemetry.addWidget(self.Basinc2Label2, 2, 5, 1, 1)
+
+        self.PaketNumLabel = QLabel(self.widget)
+        self.PaketNumLabel.setObjectName(u"PaketNumLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.PaketNumLabel, 1, 32, 2, 1)
+
+        self.PaketNumLabel2 = QLabel(self.widget)
+        self.PaketNumLabel2.setObjectName(u"PaketNumLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.PaketNumLabel2, 3, 4, 1, 1)
+
+        self.BasincLabel = QLabel(self.widget)
+        self.BasincLabel.setObjectName(u"BasincLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.BasincLabel, 1, 27, 1, 1)
+
+        self.GorevYukuYukseklikLabel2 = QLabel(self.widget)
+        self.GorevYukuYukseklikLabel2.setObjectName(u"GorevYukuYukseklikLabel2")
+        self.GorevYukuYukseklikLabel2.setMaximumSize(QSize(16777215, 20))
+
+        self.gridLayoutTelemetry.addWidget(self.GorevYukuYukseklikLabel2, 2, 11, 1, 1)
+
+        self.UyduStatLabel = QLabel(self.widget)
+        self.UyduStatLabel.setObjectName(u"UyduStatLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.UyduStatLabel, 1, 10, 1, 1)
+
+        self.S1Label = QLabel(self.widget)
+        self.S1Label.setObjectName(u"S1Label")
+
+        self.gridLayoutTelemetry.addWidget(self.S1Label, 1, 19, 2, 1)
+
+        self.PitchLabel = QLabel(self.widget)
+        self.PitchLabel.setObjectName(u"PitchLabel")
+
+        self.gridLayoutTelemetry.addWidget(self.PitchLabel, 1, 15, 1, 1)
+
+        self.PilGerilimiLabel2 = QLabel(self.widget)
+        self.PilGerilimiLabel2.setObjectName(u"PilGerilimiLabel2")
+        self.PilGerilimiLabel2.setMaximumSize(QSize(16777215, 16))
+
+        self.gridLayoutTelemetry.addWidget(self.PilGerilimiLabel2, 2, 3, 1, 1)
+
+        self.PilGerilimiLabel = QLabel(self.widget)
+        self.PilGerilimiLabel.setObjectName(u"PilGerilimiLabel")
+        self.PilGerilimiLabel.setMaximumSize(QSize(16777215, 16))
+
+        self.gridLayoutTelemetry.addWidget(self.PilGerilimiLabel, 2, 4, 1, 1)
+
+        self.SicaklikLabel2 = QLabel(self.widget)
+        self.SicaklikLabel2.setObjectName(u"SicaklikLabel2")
+        self.SicaklikLabel2.setMaximumSize(QSize(16777215, 16))
+
+        self.gridLayoutTelemetry.addWidget(self.SicaklikLabel2, 2, 1, 1, 1)
+
+        self.BasincLabel2 = QLabel(self.widget)
+        self.BasincLabel2.setObjectName(u"BasincLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.BasincLabel2, 1, 26, 1, 1)
+
+        self.UyduStatLabel2 = QLabel(self.widget)
+        self.UyduStatLabel2.setObjectName(u"UyduStatLabel2")
+
+        self.gridLayoutTelemetry.addWidget(self.UyduStatLabel2, 0, 10, 1, 1)
+
 
         self.verticalLayout.addWidget(self.frm_top)
 
@@ -168,7 +256,7 @@ class Ui_MainWindow(object):
         self.frm_middle_left = QFrame(self.frm_middle)
         self.frm_middle_left.setObjectName(u"frm_middle_left")
         self.frm_middle_left.setMinimumSize(QSize(300, 0))
-        self.frm_middle_left.setMaximumSize(QSize(250, 16777215))
+        self.frm_middle_left.setMaximumSize(QSize(300, 16777215))
         self.frm_middle_left.setStyleSheet(u"background-color: rgb(118, 152, 194);\n"
 "/*rgb(155, 195, 244)")
         self.frm_middle_left.setFrameShape(QFrame.Shape.StyledPanel)
@@ -361,14 +449,14 @@ class Ui_MainWindow(object):
 "}")
         self.arasWidget = QWidget(self.frm_middle_left)
         self.arasWidget.setObjectName(u"arasWidget")
-        self.arasWidget.setGeometry(QRect(45, 330, 200, 91))
-        self.widget = QWidget(self.frm_middle_left)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(60, 440, 174, 73))
-        self.verticalLayout_2 = QVBoxLayout(self.widget)
+        self.arasWidget.setGeometry(QRect(40, 310, 200, 121))
+        self.layoutWidget = QWidget(self.frm_middle_left)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(60, 440, 178, 73))
+        self.verticalLayout_2 = QVBoxLayout(self.layoutWidget)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.rhrh_input = QLineEdit(self.widget)
+        self.rhrh_input = QLineEdit(self.layoutWidget)
         self.rhrh_input.setObjectName(u"rhrh_input")
         self.rhrh_input.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
@@ -380,7 +468,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.rhrh_input)
 
-        self.rhrh_button = QPushButton(self.widget)
+        self.rhrh_button = QPushButton(self.layoutWidget)
         self.rhrh_button.setObjectName(u"rhrh_button")
         self.rhrh_button.setStyleSheet(u"QPushButton {\n"
 "    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
@@ -424,7 +512,7 @@ class Ui_MainWindow(object):
         self.frm_middle_middle.setFrameShadow(QFrame.Shadow.Raised)
         self.graphs_container = QWidget(self.frm_middle_middle)
         self.graphs_container.setObjectName(u"graphs_container")
-        self.graphs_container.setGeometry(QRect(0, 0, 761, 491))
+        self.graphs_container.setGeometry(QRect(0, 0, 761, 501))
         self.gridLayout = QGridLayout(self.graphs_container)
         self.gridLayout.setObjectName(u"gridLayout")
 
@@ -433,7 +521,7 @@ class Ui_MainWindow(object):
         self.frm_middle_right = QFrame(self.frm_middle)
         self.frm_middle_right.setObjectName(u"frm_middle_right")
         self.frm_middle_right.setMinimumSize(QSize(300, 0))
-        self.frm_middle_right.setMaximumSize(QSize(250, 500))
+        self.frm_middle_right.setMaximumSize(QSize(300, 10000))
         self.frm_middle_right.setStyleSheet(u"background-color: rgb(118, 152, 194);")
         self.frm_middle_right.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle_right.setFrameShadow(QFrame.Shadow.Raised)
@@ -483,39 +571,42 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.actionKopyala.setText(QCoreApplication.translate("MainWindow", u"Kopyala", None))
         self.actionYap_t_r.setText(QCoreApplication.translate("MainWindow", u"Yap\u0131\u015ft\u0131r", None))
-        self.SicaklikLabel.setText(QCoreApplication.translate("MainWindow", u"S\u0131cakl\u0131k:", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Bas\u0131n\u00e7 1:", None))
-        self.BasincLabel_2.setText(QCoreApplication.translate("MainWindow", u"20", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"100", None))
-        self.BasincLabel.setText(QCoreApplication.translate("MainWindow", u"Bas\u0131n\u00e7:", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Uydu Stat\u00fcs\u00fc:", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.TasiyiciYukseklikLabel_2.setText(QCoreApplication.translate("MainWindow", u"250 m", None))
-        self.PilGerilimiLabel_2.setText(QCoreApplication.translate("MainWindow", u"7 V", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"13.00", None))
-        self.PilGerilimiLabel.setText(QCoreApplication.translate("MainWindow", u"Pil Gerilimi:", None))
-        self.BasincLabel_3.setText(QCoreApplication.translate("MainWindow", u"0.9 ATM", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"1", None))
-        self.label_12.setText(QCoreApplication.translate("MainWindow", u"50 m", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"\u0130rtifa Fark\u0131:", None))
-        self.GorevYukuHizLabel.setText(QCoreApplication.translate("MainWindow", u"\u0130ni\u015f H\u0131z\u0131:", None))
-        self.GorevYukuHizLabel_2.setText(QCoreApplication.translate("MainWindow", u"10 m/s", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Paket Numaras\u0131:", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"G\u00f6nderme Saati:", None))
+        self.TakimNoLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>1111</p></body></html>", None))
         self.GorevYukuYukseklikLabel.setText(QCoreApplication.translate("MainWindow", u"G\u00f6rev Y\u00fck\u00fc Y\u00fckseklik:", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"0.9 ATM", None))
+        self.RollLabel.setText(QCoreApplication.translate("MainWindow", u"Roll:", None))
+        self.S2Label2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.InisHiziLabel.setText(QCoreApplication.translate("MainWindow", u"\u0130ni\u015f H\u0131z\u0131:", None))
+        self.TakimNoLabel.setText(QCoreApplication.translate("MainWindow", u"Tak\u0131m No:", None))
+        self.GpsLonLabel.setText(QCoreApplication.translate("MainWindow", u"GPS1 LONGITUDE:", None))
+        self.GpsAltLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.RollLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.TasiyiciYukseklikLabel2.setText(QCoreApplication.translate("MainWindow", u"250 m", None))
+        self.PitchLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.YawLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.S2Label.setText(QCoreApplication.translate("MainWindow", u"S2 Data:", None))
+        self.GpsLatLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.GpsAltLabel.setText(QCoreApplication.translate("MainWindow", u"GPS1 ALTITUDE:", None))
+        self.GpsLatLabel.setText(QCoreApplication.translate("MainWindow", u"GPS1 LATITUDE:", None))
+        self.S1Label2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.Basinc2Label.setText(QCoreApplication.translate("MainWindow", u"Bas\u0131n\u00e7 2:", None))
+        self.YawLabel.setText(QCoreApplication.translate("MainWindow", u"Yaw:", None))
+        self.GpsLonLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.InisHiziLabel2.setText(QCoreApplication.translate("MainWindow", u"10 m/s", None))
+        self.SicaklikLabel.setText(QCoreApplication.translate("MainWindow", u"S\u0131cakl\u0131k:", None))
         self.TasiyiciYukseklikLabel.setText(QCoreApplication.translate("MainWindow", u"Ta\u015f\u0131y\u0131c\u0131 Y\u00fckseklik:", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Pil Durumu %:", None))
-        self.GorevYukuYukseklikLabel_2.setText(QCoreApplication.translate("MainWindow", u"300 m", None))
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"GPS1 LATITUDE:", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"GPS1 LONGITUDE:", None))
-        self.label_15.setText(QCoreApplication.translate("MainWindow", u"GPS1 ALTITUDE:", None))
-        self.label_16.setText(QCoreApplication.translate("MainWindow", u"Pitch:", None))
-        self.label_17.setText(QCoreApplication.translate("MainWindow", u"Roll:", None))
-        self.label_18.setText(QCoreApplication.translate("MainWindow", u"Yaw:", None))
-        self.label_19.setText(QCoreApplication.translate("MainWindow", u"Tak\u0131m No:", None))
-        self.label_20.setText(QCoreApplication.translate("MainWindow", u" S1 Data:", None))
-        self.label_21.setText(QCoreApplication.translate("MainWindow", u"S2 Data:", None))
+        self.Basinc2Label2.setText(QCoreApplication.translate("MainWindow", u"0.9 ATM", None))
+        self.PaketNumLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Paket Numaras\u0131: </p></body></html>", None))
+        self.PaketNumLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>1000</p></body></html>", None))
+        self.BasincLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Bas\u0131n\u00e7: </p></body></html>", None))
+        self.GorevYukuYukseklikLabel2.setText(QCoreApplication.translate("MainWindow", u"300 m", None))
+        self.UyduStatLabel.setText(QCoreApplication.translate("MainWindow", u"Uydu Stat\u00fcs\u00fc: ", None))
+        self.S1Label.setText(QCoreApplication.translate("MainWindow", u" S1 Data:", None))
+        self.PitchLabel.setText(QCoreApplication.translate("MainWindow", u"Pitch:", None))
+        self.PilGerilimiLabel2.setText(QCoreApplication.translate("MainWindow", u"7 V", None))
+        self.PilGerilimiLabel.setText(QCoreApplication.translate("MainWindow", u"Pil Gerilimi:", None))
+        self.SicaklikLabel2.setText(QCoreApplication.translate("MainWindow", u"20", None))
+        self.BasincLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>0.9 ATM</p></body></html>", None))
+        self.UyduStatLabel2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
         self.sistemBaslatButton.setText(QCoreApplication.translate("MainWindow", u"Sistemi Ba\u015flat", None))
         self.telemetriAlButton.setText(QCoreApplication.translate("MainWindow", u"Telemetri Al", None))
         self.ayrilmaGerceklestirButton.setText(QCoreApplication.translate("MainWindow", u"Ayr\u0131lmay\u0131 Ger\u00e7ekle\u015ftir", None))

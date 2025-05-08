@@ -1,5 +1,5 @@
 from PySide6.QtGui import QPixmap, Qt
-from PySide6.QtWidgets import QMainWindow, QVBoxLayout
+from PySide6.QtWidgets import QMainWindow, QVBoxLayout, QSizePolicy
 
 from Camera.CameraThread import CameraThread
 from ClientServer.ClientThread import ClientThread
@@ -36,7 +36,60 @@ class MainWindow_Form(QMainWindow):
         for idx, graph in enumerate(self.graphs):
             dummy_data = np.sin(np.linspace(0, 10, 100) + idx)
             graph.plot_data(dummy_data, title=f"Grafik {idx + 1}")
-        ###
+
+        ### -----------------------------------------------------
+        ## Telemetri Labelları
+        label_names_pairs = [
+            ("PaketNumLabel", "PaketNumLabel2"),
+            ("TakimNoLabel", "TakimNoLabel2"),
+            ("BasincLabel", "BasincLabel2"),
+            ("Basinc2Label", "Basinc2Label2"),
+            ("GorevYukuYukseklikLabel", "GorevYukuYukseklikLabel2"),
+            ("TasiyiciYukseklikLabel", "TasiyiciYukseklikLabel2"),
+            ("InisHiziLabel", "InisHiziLabel2"),
+            ("GpsLatLabel", "GpsLatLabel2"),
+            ("GpsLonLabel", "GpsLonLabel2"),
+            ("GpsAltLabel", "GpsAltLabel2"),
+            ("PitchLabel", "PitchLabel2"),
+            ("RollLabel", "RollLabel2"),
+            ("YawLabel", "YawLabel2"),
+            ("PilGerilimiLabel", "PilGerilimiLabel2"),
+            ("S1Label", "S1Label2"),
+            ("S2Label", "S2Label2"),
+            ("SicaklikLabel", "SicaklikLabel2"),
+            ("UyduStatLabel", "UyduStatLabel2"),
+        ]
+
+        self.data_labels = {}
+        num_rows = 3
+        labels_per_row = len(label_names_pairs) // num_rows
+        row = 0
+        col = 0
+
+        for index, (label1_name, label2_name) in enumerate(label_names_pairs):
+            label1 = getattr(self.ui, label1_name)
+            label2 = getattr(self.ui, label2_name)
+
+            self.ui.gridLayoutTelemetry.addWidget(label1, row, col)
+            col += 1
+            self.ui.gridLayoutTelemetry.addWidget(label2, row, col)
+            col += 1
+
+            # Bir satırdaki etiket çifti sayısına ulaşıldığında bir sonraki satıra geç
+            if (index + 1) % labels_per_row == 0 and index < len(label_names_pairs) - 1:
+                row += 1
+                col = 0
+
+            label1.setAlignment(Qt.AlignCenter)
+            label2.setAlignment(Qt.AlignCenter)
+
+            self.data_labels[label1_name] = label1
+            self.data_labels[label2_name] = label2
+
+        self.ui.gridLayoutTelemetry.setVerticalSpacing(5)
+        self.ui.gridLayoutTelemetry.setHorizontalSpacing(35)
+
+        ######-----------------------------------------------------
 
         # Soket istemcisi thread'i başlat
         self.client_thread = ClientThread(host="localhost", port=7001)
