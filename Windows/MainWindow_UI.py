@@ -173,9 +173,6 @@ class Ui_MainWindow(object):
 "/*rgb(155, 195, 244)")
         self.frm_middle_left.setFrameShape(QFrame.Shape.StyledPanel)
         self.frm_middle_left.setFrameShadow(QFrame.Shadow.Raised)
-        self.arasWidget = QWidget(self.frm_middle_left)
-        self.arasWidget.setObjectName(u"arasWidget")
-        self.arasWidget.setGeometry(QRect(50, 320, 201, 91))
         self.sistemBaslatButton = QPushButton(self.frm_middle_left)
         self.sistemBaslatButton.setObjectName(u"sistemBaslatButton")
         self.sistemBaslatButton.setGeometry(QRect(60, 20, 171, 38))
@@ -362,9 +359,17 @@ class Ui_MainWindow(object):
 "    border: 1px solid #800000;\n"
 "    color: #CD853F; /* Peru */\n"
 "}")
-        self.rhrh_input = QLineEdit(self.frm_middle_left)
+        self.arasWidget = QWidget(self.frm_middle_left)
+        self.arasWidget.setObjectName(u"arasWidget")
+        self.arasWidget.setGeometry(QRect(45, 330, 200, 91))
+        self.widget = QWidget(self.frm_middle_left)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(60, 440, 174, 73))
+        self.verticalLayout_2 = QVBoxLayout(self.widget)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.rhrh_input = QLineEdit(self.widget)
         self.rhrh_input.setObjectName(u"rhrh_input")
-        self.rhrh_input.setGeometry(QRect(60, 430, 171, 25))
         self.rhrh_input.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
 "    color: black;\n"
@@ -372,9 +377,11 @@ class Ui_MainWindow(object):
 "    border-radius: 5px;\n"
 "    padding: 4px;\n"
 "}")
-        self.rhrh_button = QPushButton(self.frm_middle_left)
+
+        self.verticalLayout_2.addWidget(self.rhrh_input)
+
+        self.rhrh_button = QPushButton(self.widget)
         self.rhrh_button.setObjectName(u"rhrh_button")
-        self.rhrh_button.setGeometry(QRect(60, 470, 171, 38))
         self.rhrh_button.setStyleSheet(u"QPushButton {\n"
 "    background-color: #800000; /* DarkRed (derin, kapal\u0131 bordo) */\n"
 "    border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapal\u0131 bordo \u00e7er\u00e7eve) */\n"
@@ -403,6 +410,9 @@ class Ui_MainWindow(object):
 "    border: 1px solid #800000;\n"
 "    color: #CD853F; /* Peru */\n"
 "}")
+
+        self.verticalLayout_2.addWidget(self.rhrh_button)
+
 
         self.horizontalLayout_3.addWidget(self.frm_middle_left)
 

@@ -592,16 +592,6 @@
          <property name="frameShadow">
           <enum>QFrame::Shadow::Raised</enum>
          </property>
-         <widget class="QWidget" name="arasWidget" native="true">
-          <property name="geometry">
-           <rect>
-            <x>50</x>
-            <y>320</y>
-            <width>201</width>
-            <height>91</height>
-           </rect>
-          </property>
-         </widget>
          <widget class="QPushButton" name="sistemBaslatButton">
           <property name="geometry">
            <rect>
@@ -860,36 +850,43 @@ QPushButton:disabled {
            <string>Sistemi Durdur</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="rhrh_input">
+         <widget class="QWidget" name="arasWidget" native="true">
+          <property name="geometry">
+           <rect>
+            <x>43</x>
+            <y>330</y>
+            <width>200</width>
+            <height>91</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QWidget" name="">
           <property name="geometry">
            <rect>
             <x>60</x>
-            <y>430</y>
-            <width>171</width>
-            <height>25</height>
+            <y>440</y>
+            <width>174</width>
+            <height>73</height>
            </rect>
           </property>
-          <property name="styleSheet">
-           <string notr="true">QLineEdit {
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="rhrh_input">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
     background-color: white;
     color: black;
     border: 1px solid gray;
     border-radius: 5px;
     padding: 4px;
 }</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="rhrh_button">
-          <property name="geometry">
-           <rect>
-            <x>60</x>
-            <y>470</y>
-            <width>171</width>
-            <height>38</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="rhrh_button">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
     background-color: #800000; /* DarkRed (derin, kapalı bordo) */
     border: 1px solid #6A0DAD; /* DarkOrchid (hafif mor alt tonlu kapalı bordo çerçeve) */
     padding: 8px 16px;
@@ -917,10 +914,13 @@ QPushButton:disabled {
     border: 1px solid #800000;
     color: #CD853F; /* Peru */
 }</string>
-          </property>
-          <property name="text">
-           <string>RHRH KODU GONDER</string>
-          </property>
+             </property>
+             <property name="text">
+              <string>RHRH KODU GONDER</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </widget>
        </item>

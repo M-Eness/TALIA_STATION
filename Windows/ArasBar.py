@@ -13,7 +13,7 @@ class ArasBar(QWidget):
         grid = QGridLayout()
         for i in range(5):
             box = QFrame()
-            box.setFixedSize(30, 20)
+            box.setFixedSize(35, 20)
             box.setStyleSheet("background-color: red; border: 1px solid black;")
             grid.addWidget(box, 0, i)
 
